@@ -1,7 +1,60 @@
 <!DOCTYPE html>
 <html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+
+body{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.header {
+    height:30px;
+    background-color:red;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.footer {
+    border-top: 2px solid #DDDDDD;
+    height:50px;
+    background-color: #F5F5F5;
+}
+  </style>
+</head>
 <body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<div class="header">
+helloworld
+</div>
+<div class="container content">
+  <h1>White Life 健身房會員系統</h1>
+  <p>This is some text.</p> <br />
+<form action="footer.demo.html">
+    <input type="text" class="form-control" id="txtAct" placeholder="請輸入帳號" required autofocus>
+    <input type="password" class="form-control" id="txtPwd" placeholder="請輸入密碼" required>
+  <div class="checkbox">
+    <label><input type="checkbox"> 記住我</label>
+  </div>
+  <button type="submit" class="btn btn-primary">確定</button>
+</form>
+</div>
+<div class="footer">
+helloworld
+</div>
 </body>
 </html>
