@@ -1,0 +1,95 @@
+
+
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap-theme.min.css" />
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="styles/styles.css" />
+<style>
+    img#photo{
+        vertical-align:inherit;
+    }
+</style>
+<script type="text/javascript">
+    $(document).ready(function () {
+        'use strict';
+        var videoPlaying = false;
+        var constraints = {
+            video: { width: 400, height: 300 },
+            audio: false
+        };
+
+        var video = document.querySelector('video');
+
+        function handleSuccess(stream) {
+            window.stream = stream; // only to make stream available to console
+            video.srcObject = stream;
+
+            // Start the video
+            video.play();
+            videoPlaying = true;
+        }
+
+        function handleError(error) {
+            console.log('navigator.getUserMedia error: ', error);
+        }
+
+        function startVideo() {
+            if (video.srcObject == null) {
+                navigator.mediaDevices.getUserMedia(constraints)
+                                        .then(handleSuccess)
+                                        .catch(handleError);
+            }
+            else {
+                video.play();
+            }
+            //https://developer.mozilla.org/en-US/docs/Web/API/MediaDevices/getUserMedia
+
+
+        }
+        startVideo();
+
+
+        // Listen for user click on the "take a photo" button
+        $("#btnCapture").click(function (e) {
+            e.preventDefault();
+            if (videoPlaying) {
+                var canvas = document.getElementById('canvas');
+                canvas.width = video.videoWidth;
+                canvas.height = video.videoHeight;
+                canvas.getContext('2d').drawImage(video, 0, 0);
+                var data = canvas.toDataURL('image/webp');
+                document.getElementById('photo').setAttribute('src', data);
+            }
+        });
+        $("#btnPause").click(function (e) {
+            e.preventDefault();
+            video.pause();
+        });
+        $("#btnClose").click(function (e) {
+            e.preventDefault();
+            video.srcObject.getTracks()[0].stop();
+            video.srcObject = null;
+        });
+        $("#btnPlay").click(function (e) {
+            e.preventDefault();
+            startVideo();
+        });
+    });
+</script>
+<title>Camera Demo</title>
+</head>
+<body>
+  <button id="btnCapture">Take a photo</button><br />
+  <button id="btnClose">close</button><br />
+  <button id="btnPause">Pause</button><br />
+  <button id="btnPlay">Play</button><br />
+  <img src="images/takePhoto.png" width="400" height="300" srcsrc="https://dummyimage.com/400x300/ccc/000000.png&text=請拍照" id="photo" alt="photo" />
+  <video id="v"></video>
+  <canvas id="canvas" style="display:none;"></canvas>
+</body>
+</html>
