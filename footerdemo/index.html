@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<!--[if lt IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+<![endif]-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+body{
+    margin:0;
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+}
+.header {
+    text-align:center;
+    height:30px;
+    background-color:#1669e636;
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 0 auto;
+    -ms-flex: 0 0 auto;
+    flex: 0 0 auto;
+}
+.content {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 0 auto;
+    -ms-flex: 1 0 auto;
+    flex: 1 0 auto;
+}
+.footer {
+    text-align:center;
+    border-top: 2px solid #DDDDDD;
+    padding: 15px 0;
+    background-color: #F5F5F5;
+}
+  </style>
+
+</head>
+<body>
+<div class="header">
+  helloworld
+</div>
+<div class="container content">
+  hello world<br />
+  <input type="button" id="btnToggle" value="toggle lots of content" /><br />
+  <div id="extraContent" style="display:none">
+    <br />
+    See where the footer goes
+    <br />
+    <br />
+    hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />hello world<br />
+  </div>
+</div>
+<div class="footer" >
+  helloworld
+</div>
+<script type="text/javascript">
+  var btn = document.getElementById("btnToggle");
+  var div = document.getElementById("extraContent");
+  var divToggle = false;
+  btn.onclick = function(){
+    divToggle = !divToggle;
+    if(divToggle){
+      div.style.display = "block";
+    }
+    else{
+      div.style.display = "none";
+    }
+  };
+</script>
+</body>
+</html>
