@@ -35,10 +35,23 @@ $(document).ready(function(){
     $("#tbxCalculate").click(function(){
         
         var now = new Date();
+        var testNow = new Date();
         var result = "現在時間 " + toProperDateFormat(now) + "<br />";
         
-        var lgFinishDate = new Date($("#tbxEndDateTime").val());
-        result += "LG 完成時間: " + toProperDateFormat(lgFinishDate) + "<br />";
+        var endDateVal = $("#tbxEndDateTime").val();
+        var lgFinishDate = new Date(endDateVal);
+
+        testNow.setMinutes(testNow.getMinutes() + 30 );
+        testNow.setHours(testNow.getHours() + 3);
+        if(testNow > lgFinishDate){
+            result += "<span style='color:red'>洗至少要3.5個小時 請設定3.5小時後的時間...</span><br />";
+            result += "請設定至少 " + toProperDateFormat(testNow) + " 之後";
+            $("#resultDiv").html(result);
+            return;
+        }
+        
+        
+        result += "期望 LG 完成的時間: " + toProperDateFormat(lgFinishDate) + "<br />";
         lgFinishDate.setHours(lgFinishDate.getHours() - 3);
         lgFinishDate.setMinutes( lgFinishDate.getMinutes() - 30 );
         result += "LG 開始洗的時間間為: " + toProperDateFormat(lgFinishDate) + "<br />";
