@@ -5,7 +5,7 @@ function cleanup() {
     echo "processing ${folder}"
     mkdir -p ${folder}
     cd ${folder}
-    find ./* -mtime +1 -type d -exec rm -rf {} \;
+    find ./* -mmin +40 -type d -exec rm -rf {} \;
 }
 echo `date`
 cleanup "/mnt/yarn/usercache/root/filecache/"
