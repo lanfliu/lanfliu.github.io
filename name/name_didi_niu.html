@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>屬【牛】</title>
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<style type="text/css">
+div{padding-right:10px;padding-bottom:4px;display:inline;}
+
+</style>
+<style>
+        * { font-family:arial,sans-serif; }
+        table{ border-collapse: collapse;}
+        td, th { border: 1px solid #ddd; padding: 8px; }
+
+        .head{background-color: #49bcb7;}
+        tr:hover {background-color: #ddd;}
+        th { padding-top: 12px; padding-bottom: 12px; text-align: left; background-color: #49bcb7; color: white; }
+        h1{Color:white;}
+    </style>
+</head>
+
+<body>
+<a target="_blank" href="https://blog.xuite.net/flora87259/theresa/21869440-%E7%94%9F%E8%82%96%E5%B1%AC%E8%80%81%E9%BC%A0%28%E5%AD%90%E3%80%81%E6%B0%B4%29%E5%96%9C%E7%94%A8%E5%AD%97">姓名筆劃</a>
+<a target="_blank" href="https://blog.johnwu.cc/article/%E6%96%B0%E7%94%9F%E5%85%92%E5%8F%96%E5%90%8D.html">新生兒取名</a>
+準備中
+<script type="text/javascript">
+//$(document).ready(function(){
+//var a = {
+//  6 : ['如', '安', '羽'],
+//  7  : ['彤', '希', '貝', '妤', '吟', '妍', '辰'],
+//  8  : ['宜', '沂', '采', '函', '姍', '沛'],
+//	9  : ['宥', '品', '怡', '思', '盈', '貞', '育'],
+//  10 : ['芸', '珊', '玲', '純', '祐', '真', '容', '宸', '紜'],
+//  14 : ['萍','瑜','嘉','維','綺','綾'],
+//  15 : ['葦','瑤','嫻','瑩','槿','誼','緻','緣'],
+//  16 : ['蓉','穎','靜','澄','潔','瑾','樺','璇','蓁','錡','諭','臻','縈','學','橙'],
+// /* 17*/
+//  18 : ['蕎'],
+//  20 : ['馨', '瀠'],
+//  22 : ['蘋', '懿']
+//};
+
+var xa = {
+ 1 : ['乙'],
+ 2 : ['乃','了','二','几'],
+ 3 : ['下','凡','也','于','千','士','子','寸','小','川','己','巳','弓'],
+ 4 : ['丑','丹','之','云','井','元','內','勻','壬','孔','引','斗','水'],
+ 5 : ['世','丘','冬','北','卉','巧','平','弘','永','玄','生','田','甲','禾','穴','立'],
+ 6 : ['丞','亥','兆','再','地','妃','好','守','州','曲','臣','虫','西'],
+ 7 : ['池','坊','均','壯','妙','妤','孝','宏','序','廷','步','甫','私','秀','角','豆','邑','酉'],
+ 8 : ['乳','亞','享','其','函','叔','和','固','姍','孟','季','定','宜','宙','尚','居','延','承','果','松','牧','秉','竺','舍','金','隹','雨','非'],
+ 9 : ['芋','芍','法','泓','治','泛','勃','勁','厚','垂','屋','建','弈','扁','癸','盈','相','科','秒','秋','竿','虹','要','重','風','飛','食','泰','芊'],
+10 : ['迅','巡','芳','芝','芽','芹','芸','芷','洲','津','凌','原','圃','家','庫','庭','料','栗','特','畔','耘','耕','航','記','訓','起','軒','酒','配','芫'],
+11 : ['邦','那','迎','近','范','若','苗','英','苔','苑','挺','浦','海','浮','浚','浩','浥','乾','基','專','康','張','強','笠','笙','翌','麥','苹','苡','浤','婕','娸'],
+12 : ['述','迪','草','茵','荏','茲','捷','淳','添','清','涵','淦','凱','博','喜','壹','富','巽','弼','甥','登','發','程','稅','筍','筑','粟','舒','貴','鈕','鈞','閎','雅','雄','順','黍','茜','淀','淥','畯'],
+13 : ['迺','莆','湘','渙','湄','圓','廉','彙','楓','毓','猷','萬','稜','稚','稠','艇','鈿','雋','雷','電','楙','豊'],
+14 : ['逍','通','逗','連','逐','透','逢','菩','萍','菁','華','菱','菽','菲','菊','萄','源','榮','槐','睿','筵','翠','臺','豪','輔','酵','銅','銘','銨','閩','鳴','鳳','逑','菀','菫','菘','菉','溱','溎','滎','箐','嫺'],
+15 : ['逵','週','逸','進','萱','葵','葦','葉','漳','演','漢','漣','滬','嫻','寬','廣','彈','毅','稼','穀','稻','範','諄','趟','趣','輪','鋪','鋒','黎','逯','萩','滽','鋐'],
+16 : ['郵','運','遊','道','蓉','蒼','潼','澄','潭','潤','潘','勳','奮','學','導','樺','橙','穎','築','臻','興','融','豫','錠','錄','錐','雕','霍','霏','頤','蓁','潗','澐','廩'],
+17 : ['隆','遠','遙','蔗','蓮','蔬','蔭','澤','篷','聲','臨','鍵','鍾','鴻'],
+18 : ['鄘','鄞','適','遨','濟','濠','濛','濯','濬','濡','獲','蟬','豐','鎰','馥','鵑','蕓','薌','鎧'],
+19 : ['鄰','鄭','鄧','選','薪','蕾','穫','醮','鏗','鵬','薐','瀅','鏞'],
+20 : ['還','邁','藍','薰','薹','寶','醴','馨','薷'],
+21 : ['邇','藩','藝','籐','蠟','鶯','鶴'],
+22 : ['邊','藺','蘋','蘇','蘊','懿','權','藶'],
+23 : ['蘭','麟'],
+24 : ['艷','鷹'],
+25 : ['黌']
+};
+
+var tableSize = 10;
+
+function constructName(count1, count2, score){
+
+try{
+  document.write('<tr class="head"><td colspan="' + tableSize + '"><h1>' + count1 + '劃' + ' ' + count2 + '劃' + ' 分數：' + score + '</h1></td></tr>');
+  var ary1 = xa[count1];
+  var ary2 = xa[count2];
+  document.write("<tr>");
+  var size = 1;
+  for (var i = 0; i < ary1.length; i++) {
+    for (var j = 0; j < ary2.length; j++) {
+      //document.write('<div highlight="false">' + ary1[i] + ary2[j] + "</div>");
+      document.write('<td><div highlight="false">' + ary1[i] + ary2[j] + "</div></td>");
+      if(size++ >= tableSize){
+        document.write('</tr><tr>');
+        size = 1;
+      }
+    }
+  }
+  document.write("</tr>");
+  }catch(err){
+    console.log(count1 + ' ' + count2);
+  }
+  
+  
+  
+  
+  
+  return;
+try{
+  document.write('<hr />');
+  document.write('<h1>' + count1 + '劃' + ' ' + count2 + '劃' + '</h1>');
+  var ary1 = a[count1];
+  var ary2 = a[count2];
+
+  for (var i = 0; i < ary1.length; i++) {
+    for (var j = 0; j < ary2.length; j++) {
+      document.write('<div highlight="false">' + ary1[i] + ary2[j] + "</div>");
+    }
+  }
+  }catch(err){
+    console.log(count1 + ' ' + count2);
+  }
+  
+}
+function NAconstructName(count1, count2){
+  return;
+  constructName(count1, count2);
+}
+
+
+document.write('<table>');
+
+constructName(1, 2, 100);
+constructName(1, 5, 100);
+constructName(1, 7, 100);
+constructName(1, 15, 100);
+constructName(1, 16, 100);
+constructName(1, 17, 100);
+constructName(1, 23, 100);
+constructName(2, 4, 100);
+constructName(2, 6, 100);
+constructName(2, 14, 100);
+constructName(2, 15, 100);
+constructName(2, 16, 100);
+constructName(3, 5, 100);
+constructName(3, 14, 100);
+constructName(3, 15, 100);
+constructName(8, 16, 100);
+constructName(8, 24, 100);
+constructName(9, 7, 100);
+constructName(9, 15, 100);
+constructName(9, 23, 100);
+constructName(9, 24, 100);
+constructName(10, 6, 100);
+constructName(10, 7, 100);
+constructName(10, 14, 100);
+constructName(10, 23, 100);
+constructName(16, 16, 100);
+constructName(16, 17, 100);
+constructName(17, 7, 100);
+constructName(17, 15, 100);
+constructName(17, 16, 100);
+constructName(18, 6, 100);
+constructName(18, 14, 100);
+constructName(18, 15, 100);
+constructName(20, 4, 100);
+constructName(20, 17, 100);
+constructName(22, 15, 100);
+constructName(26, 6, 100);
+constructName(26, 7, 100);
+
+
+document.write('</table>');
+
+
+
+$('div').on('mouseover', function(){
+  $(this).css('background-color', 'red');
+  $(this).css('color', 'white');
+}).on('mouseout', function(){
+  $(this).css('background-color', 'inherit');
+  $(this).css('color', 'inherit');
+});
+$('div').on('click', function() {
+  var highlight = $(this).attr("highlight");
+
+  if(highlight === 'false'){
+    $(this).attr("bc", $(this).css("background-color"));
+    $(this).attr("fs", $(this).css("font-size"));
+    $(this).attr("cc", $(this).css("color"));
+    
+    $(this).css('background-color', '#1404ff');
+    $(this).css('font-size', ' 5em');
+    $(this).attr("highlight", "true");
+  }
+  else{
+    $(this).css('background-color', 'inherit');
+    $(this).css('font-size', $(this).attr("fs"));
+    $(this).css('color', 'inherit');
+    $(this).attr("highlight", "false");
+  }
+
+});
+//});
+</script>
+</body>
+
+</html>
