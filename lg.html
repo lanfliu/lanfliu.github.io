@@ -13,6 +13,7 @@
 <input type="radio" id="html" name="dry_time" value="130">1:30<br />
 <input type="radio" id="html" name="dry_time" value="100">1:00<br />
 <input type="radio" id="html" name="dry_time" value="030">0:30<br />
+<input type="radio" id="html" name="dry_time" value="000">不烘乾<br />
 
 洗完的時間<br />
 <input type="text" id="tbxEndDateTime" autocomplete="off" readonly="readonly" /><br /><br />
@@ -58,13 +59,21 @@ $(document).ready(function(){
         
 
         var dry_time_str = $('input[name=dry_time]:checked').val()
-        var selectedHour = parseInt(dry_time_str.substring(0,1)) + 1 //wash needs 1 hour
+        var selectedHour = parseInt(dry_time_str.substring(0,1))
         var selectedMinutes = parseInt(dry_time_str.substring(1))
-
-        result += String.format("設定烘乾的時間為{0}小時{1}分鐘<br />", selectedHour, selectedMinutes);
+        debugger;
+        if(selectedHour == 0 && selectedMinutes == 0){
+          result += String.format("設定不烘乾<br />", selectedHour, selectedMinutes);
+        }
+        else{
+          result += String.format("設定烘乾的時間為{0}小時{1}分鐘<br />", selectedHour, selectedMinutes);
+        }
+        
 
         var endDateVal = $("#tbxEndDateTime").val();
         var lgFinishDate = new Date(endDateVal);
+        
+        selectedHour += 1 //wash needs 1 hour
 
         testNow.setMinutes(testNow.getMinutes() + selectedMinutes );
         testNow.setHours(testNow.getHours() + selectedHour);
