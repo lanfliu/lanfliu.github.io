@@ -1,0 +1,23 @@
+{
+  "statusCode": 200,
+  "templateResources": [
+    {
+      "FssStack": {
+        "Type": "AWS::CloudFormation::Stack",
+        "Properties": {
+          "Parameters": {
+            "FileStorageSecurityStackRegions": {
+              "Fn::GetAtt": [
+                "customListRegions",
+                "FileStorageSecurityRegions"
+              ]
+            },
+            "APIEndpoint": "https://filestorage.trend-us-1.dev-cloudone.trendmicro.com/api/"
+          },
+          "TemplateURL": "https://vision-one-cloud-accounts-alpha-us-east-1.s3.amazonaws.com/templates/aws/fss/V1FSS-StackSets.yaml",
+          "TimeoutInMinutes": 30
+        }
+      }
+    }
+  ]
+}
