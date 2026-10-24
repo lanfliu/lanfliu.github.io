@@ -190,6 +190,8 @@ function runMobstersAnalyzer(DEBUG = true) {
     if (landId != undefined) {
       const button = document.createElement("button");
       //change the button style to normal button style
+      button.id = "buy-land-button";
+
       button.style.padding = "10px 20px";
       button.style.fontSize = "16px";
       button.style.cursor = "pointer";
@@ -213,6 +215,8 @@ function runMobstersAnalyzer(DEBUG = true) {
     if (terId != undefined) {
       const button = document.createElement("button");
       //change the button style to normal button style
+      button.id = "buy-territory-button";
+
       button.style.padding = "10px 20px";
       button.style.fontSize = "16px";
       button.style.cursor = "pointer";
@@ -227,10 +231,13 @@ function runMobstersAnalyzer(DEBUG = true) {
       button.onclick = () => {
         button.style.backgroundColor = "black";
         button.disabled = true;
+        
+        document.getElementById("buy-territory-button")?.style.setProperty("display", "none");
+        document.getElementById("buy-land-button")?.style.setProperty("display", "none");
         territoryBuy(terId);
       };
       container.appendChild(button);
     }
 
-  }, 1000);
+  }, 1500);
 }
