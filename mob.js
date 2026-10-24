@@ -1,3 +1,4 @@
+
 function runMobstersAnalyzer(DEBUG = true) {
   const log = (...args) => {
     if (DEBUG) console.log(...args);
